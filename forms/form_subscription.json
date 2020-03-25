@@ -1,0 +1,66 @@
+{
+    "structure": {
+        "fields": {
+            "name": {
+                "type": "text",
+                "label": "Name",
+                "canBeRemovedFromLayout": true,
+                "attributes": {
+                    "placeholder": "Type your name"
+                }
+            },
+            "surname": {
+                "type": "text",
+                "label": "Surname",
+                "canBeRemovedFromLayout": true,
+                "attributes": {
+                    "placeholder": "Type your surname"
+                }
+            },
+            "email": {
+                "type": "email",
+                "label": "Email *",
+                "canBeRemovedFromLayout": false,
+                "attributes": {
+                    "required": true,
+                    "placeholder": "Type your e-mail"
+                }
+            },
+            "privacy": {
+                "type": "checkbox",
+                "label": "I agree to the terms in the [privacy Policy](http://example.com)",
+                "canBeRemovedFromLayout": false,
+                "attributes": {
+                    "required": true
+                }
+            },
+            "submit": {
+                "type": "submit",
+                "label": "",
+                "removeFromLayout": false,
+                "canBeRemovedFromLayout": false,
+                "attributes": {
+                    "value": "Subsrcibe",
+                    "width": "50%"
+                }
+            }
+        },
+        "layout": [
+            ["name", "surname"],
+            ["email"],
+            ["privacy"],
+            ["submit"]
+        ],
+        "attributes": {
+            "accept-charset": "UTF-8",
+            "action": "http://example.com/read-form-script",
+            "autocomplete": "on",
+            "enctype": "multipart/form-data",
+            "method": "post",
+            "novalidate": false,
+            "target": "_self"
+        },
+        "title": "Simple Newsletter subscription",
+        "description": "A BEE test form"
+    }
+}

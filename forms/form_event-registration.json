@@ -1,0 +1,67 @@
+{
+    "structure": {
+        "fields": {
+            "name": {
+                "type": "text",
+                "label": "Name",
+                "removeFromLayout": false,
+                "canBeRemovedFromLayout": true
+            },
+            "surname": {
+                "type": "text",
+                "label": "Surname *",
+                "removeFromLayout": false,
+                "canBeRemovedFromLayout": true,
+                "attributes": {
+                    "required": true
+                }
+            },
+            "date_time": {
+                "type": "datetime-local",
+                "label": "Pick your date/time *",
+                "removeFromLayout": false,
+                "canBeRemovedFromLayout": true,
+                "attributes": {
+                    "required": true
+                }
+            },
+            "email": {
+                "type": "email",
+                "label": "Email *",
+                "removeFromLayout": false,
+                "canBeRemovedFromLayout": true,
+                "attributes": {
+                    "required": true
+                }
+            },
+            "submit_button": {
+                "type": "submit",
+                "label": "",
+                "removeFromLayout": false,
+                "canBeRemovedFromLayout": true,
+                "attributes": {
+                    "value": "SEND DATA",
+                    "name": "submit_button"
+                }
+            }
+        },
+        "layout": [
+            ["name"],
+            ["surname"],
+            ["date_time"],
+            ["email"],
+            ["submit_button"]
+        ],
+        "attributes": {
+            "accept-charset": "UTF-8",
+            "action": "http://example.com/read-form-script",
+            "autocomplete": "on",
+            "enctype": "multipart/form-data",
+            "method": "post",
+            "novalidate": false,
+            "target": "_self"
+        },
+        "title": "Event Registration",
+        "description": "A BEE test form"
+    }
+}

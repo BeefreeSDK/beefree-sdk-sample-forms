@@ -1,0 +1,2319 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "fields": {
+            "type": "object",
+            "additionalProperties": false,
+            "patternProperties": {
+                "^[a-zA-Z0-9_-]+$": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "checkbox",
+                                "color",
+                                "datalist",
+                                "date",
+                                "datetime-local",
+                                "email",
+                                "file",
+                                "hidden",
+                                "image",
+                                "label",
+                                "month",
+                                "number",
+                                "password",
+                                "radio",
+                                "range",
+                                "select",
+                                "search",
+                                "submit",
+                                "tel",
+                                "text",
+                                "textarea",
+                                "time",
+                                "url",
+                                "week"
+                            ]
+                        },
+                        "label": {
+                            "type": "string"
+                        },
+                        "canBeRemovedFromLayout": {
+                            "type": "boolean"
+                        },
+                        "removeFromLayout": {
+                            "type": "boolean"
+                        },
+                        "attributes": {},
+                        "options": {}
+                    },
+                    "required": [
+                        "type"
+                    ],
+                    "allOf": [{
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "checkbox"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "checked": {
+                                                "type": "boolean"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "label"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "color"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "date"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "string"
+                                            },
+                                            "min": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "step": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "datetime-local"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "string"
+                                            },
+                                            "min": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "step": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "email"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "multiple": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "size": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "file"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accept": {
+                                                "type": "string"
+                                            },
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "capture": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "multiple": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "hidden"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "image"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "alt": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "height": {
+                                                "type": "string"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "src": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            },
+                                            "width": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "month"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "string"
+                                            },
+                                            "min": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "step": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "number"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "number"
+                                            },
+                                            "min": {
+                                                "type": "number"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "step": {
+                                                "type": "number"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "password"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "pattern": {
+                                                "type": "boolean"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "size": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "radio"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "checked": {
+                                                "type": "boolean"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "range"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "number"
+                                            },
+                                            "min": {
+                                                "type": "number"
+                                            },
+                                            "step": {
+                                                "type": "number"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "search"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "dirname": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "submit"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            },
+                                            "width": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "tel"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "pattern": {
+                                                "type": "boolean"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "size": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "text"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "dirname": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "pattern": {
+                                                "type": "boolean"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "size": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "time"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "string"
+                                            },
+                                            "min": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "step": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "url"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "week"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "list": {
+                                                "type": "string"
+                                            },
+                                            "max": {
+                                                "type": "string"
+                                            },
+                                            "min": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "step": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "select"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "options": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "option",
+                                                    "optgroup"
+                                                ]
+                                            },
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            },
+                                            "options": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "type": {
+                                                            "type": "string",
+                                                            "enum": ["option"]
+                                                        },
+                                                        "label": {
+                                                            "type": "string"
+                                                        },
+                                                        "value": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "additionalProperties": false,
+                                                    "required": [
+                                                        "type"
+                                                    ]
+                                                },
+                                                "additionalItems": false,
+                                                "required": [
+                                                    "type"
+                                                ]
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    },
+                                    "additionalItems": false,
+                                    "minItems": 1
+                                },
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "multiple": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "size": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "textarea"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "autocomplete": {
+                                                "type": "string"
+                                            },
+                                            "cols": {
+                                                "type": "number"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "maxlength": {
+                                                "type": "string"
+                                            },
+                                            "minlength": {
+                                                "type": "string"
+                                            },
+                                            "placeholder": {
+                                                "type": "string"
+                                            },
+                                            "required": {
+                                                "type": "boolean"
+                                            },
+                                            "rows": {
+                                                "type": "number"
+                                            },
+                                            "spellcheck": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            },
+                                            "wrap": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "if": {
+                                "properties": {
+                                    "type": {
+                                        "const": "dataList"
+                                    }
+                                }
+                            },
+                            "then": {
+                                "properties": {
+                                    "attributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "options": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "additionalItems": false,
+                                            "minItems": 1
+                                        },
+                                        "properties": {
+                                            "accesskey": {
+                                                "type": "string"
+                                            },
+                                            "class": {
+                                                "type": "string"
+                                            },
+                                            "contenteditable": {
+                                                "type": "boolean"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "disabled": {
+                                                "type": "boolean"
+                                            },
+                                            "readonly": {
+                                                "type": "boolean"
+                                            },
+                                            "draggable": {
+                                                "type": "boolean"
+                                            },
+                                            "hidden": {
+                                                "type": "boolean"
+                                            },
+                                            "id": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "itemid": {
+                                                "type": "string"
+                                            },
+                                            "itemprop": {
+                                                "type": "string"
+                                            },
+                                            "itemref": {
+                                                "type": "string"
+                                            },
+                                            "itemscope": {
+                                                "type": "string"
+                                            },
+                                            "itemtype": {
+                                                "type": "string"
+                                            },
+                                            "lang": {
+                                                "type": "string"
+                                            },
+                                            "tabindex": {
+                                                "type": "string"
+                                            },
+                                            "title": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "layout": {
+            "type": "array",
+            "additionalItems": false,
+            "items": {
+                "type": [
+                    "array",
+                    "object"
+                ],
+                "additionalItems": false,
+                "additionalProperties": false,
+                "items": {
+                    "type": "string"
+                },
+                "properties": {
+                    "legend": {
+                        "type": "string"
+                    },
+                    "fields": {
+                        "type": "array",
+                        "additionalItems": false,
+                        "items": {
+                            "type": "array",
+                            "additionalItems": false,
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "attributes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "accept-charset": {
+                    "type": "string"
+                },
+                "action": {
+                    "type": "string"
+                },
+                "autocomplete": {
+                    "type": "string"
+                },
+                "enctype": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "novalidate": {
+                    "type": "boolean"
+                },
+                "target": {
+                    "type": "string"
+                },
+                "dir": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "action"
+            ]
+        }
+    },
+    "required": ["fields"]
+}

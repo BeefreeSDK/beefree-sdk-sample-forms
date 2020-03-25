@@ -1,0 +1,54 @@
+{
+   "structure": {
+      "fields": {
+         "username": {
+            "type": "text",
+            "label": "Username",
+            "canBeRemovedFromLayout": false,
+            "attributes": {
+               "required": true
+            }
+         },
+         "password": {
+            "type": "password",
+            "label": "Password",
+            "canBeRemovedFromLayout": false,
+            "attributes": {
+               "required": true
+            }
+         },
+         "remember": {
+            "type": "checkbox",
+            "label": "Keep me logged in",
+            "canBeRemovedFromLayout": true,
+            "attributes": {
+               "name": "keep_logged"
+            }
+         },
+         "Submit": {
+            "type": "submit",
+            "label": "",
+            "canBeRemovedFromLayout": false,
+            "attributes": {
+               "value": "LOG IN"
+            }
+         }
+      },
+      "layout": [
+         ["username", "password"],
+         ["remember"],
+         ["Submit"]
+      ],
+      "attributes": {
+         "accept-charset": "UTF-8",
+         "action": "http://example.com/read-form-script",
+         "autocomplete": "on",
+         "enctype": "multipart/form-data",
+         "method": "post",
+         "novalidate": false,
+         "target": "_self"
+      },
+      "title": "Login form",
+      "description": "A BEE test form"
+   }
+}
