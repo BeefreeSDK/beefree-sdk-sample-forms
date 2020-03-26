@@ -1,0 +1,157 @@
+{
+    "structure": {
+        "fields": {
+            "name": {
+                "type": "text",
+                "label": "Name *",
+                "attributes": {
+                    "required": true
+                }
+            },
+            "surname": {
+                "type": "text",
+                "label": "Surname *",
+                "attributes": {
+                    "required": true
+                }
+            },
+            "email": {
+                "type": "email",
+                "label": "E-mail *",
+                "attributes": {
+                    "required": true
+                }
+            },
+            "phoneNumber": {
+                "type": "tel",
+                "label": "Phone number (xxx-xxx-xxxx)",
+                "attributes": {
+                    "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                }
+            },
+            "age": {
+                "type": "number",
+                "label": "Age"
+            },
+            "gender": {
+                "type": "select",
+                "label": "Gender",
+                "options": [{
+                        "type": "option",
+                        "label": "Male",
+                        "value": "M"
+                    },
+                    {
+                        "type": "option",
+                        "label": "Female",
+                        "value": "F"
+                    },
+                    {
+                        "type": "option",
+                        "label": "Not telling",
+                        "value": "-"
+                    }
+                ]
+            },
+            "hairColor": {
+                "type": "text",
+                "label": "Hair color",
+                "attributes": {
+                    "list": "colorList"
+                }
+            },
+            "website": {
+                "type": "url",
+                "label": "Personal website"
+            },
+            "daysLabel": {
+                "type": "label",
+                "label": "Pick your preferred days for the classes"
+            },
+            "monday": {
+                "type": "checkbox",
+                "label": "Monday",
+                "attributes": {
+                    "name": "preferredDays"
+                }
+            },
+            "tuesday": {
+                "type": "checkbox",
+                "label": "Tuesday",
+                "attributes": {
+                    "name": "preferredDays"
+                }
+            },
+            "wednesday": {
+                "type": "checkbox",
+                "label": "Wednesday",
+                "attributes": {
+                    "name": "preferredDays"
+                }
+            },
+            "thursday": {
+                "type": "checkbox",
+                "label": "Thursday",
+                "attributes": {
+                    "name": "preferredDays"
+                }
+            },
+            "friday": {
+                "type": "checkbox",
+                "label": "Friday",
+                "attributes": {
+                    "name": "preferredDays"
+                }
+            },
+            "saturday": {
+                "type": "checkbox",
+                "label": "Saturday",
+                "attributes": {
+                    "name": "preferredDays"
+                }
+            },
+            "datalist": {
+                "type": "datalist",
+                "options": ["blond", "brown", "black", "white", "blue", "purple"],
+                "attributes": {
+                    "id": "colorList"
+                }
+            },
+            "submit_button": {
+                "type": "submit",
+                "label": "",
+                "attributes": {
+                    "value": "SEND DATA",
+                    "name": "submit_button"
+                }
+            }
+        },
+        "layout": [
+            ["name", "surname"],
+            ["email", "phoneNumber"],
+            {
+                "fields": [
+                    ["age", "gender", "hairColor"],
+                    ["website"]
+                ],
+                "legend": "Additional info"
+            },
+            ["daysLabel"],
+            ["monday", "tuesday", "wednesday"],
+            ["thursday", "friday", "saturday"],
+            ["submit_button"],
+            ["datalist"]
+        ],
+        "attributes": {
+            "accept-charset": "UTF-8",
+            "action": "http://example.com/read-form-script",
+            "autocomplete": "on",
+            "enctype": "multipart/form-data",
+            "method": "post",
+            "novalidate": false,
+            "target": "_self"
+        },
+        "title": "Event Registration",
+        "description": "A BEE test form"
+    }
+}
