@@ -1,0 +1,248 @@
+{
+    "page": {
+        "title": "Template Base",
+        "description": "Test template for BEE",
+        "template": {
+            "name": "template-base",
+            "type": "basic",
+            "version": "0.0.1"
+        },
+        "body": {
+            "type": "mailup-bee-page-proprerties",
+            "container": {
+                "style": {
+                    "background-color": "#FFFFFF"
+                }
+            },
+            "content": {
+                "style": {
+                    "font-family": "Arial, 'Helvetica Neue', Helvetica, sans-serif",
+                    "color": "#000000"
+                },
+                "computedStyle": {
+                    "linkColor": "#0068A5",
+                    "messageBackgroundColor": "transparent",
+                    "messageWidth": "500px"
+                }
+            },
+            "webFonts": [
+
+            ]
+        },
+        "rows": [{
+            "type": "one-column-empty",
+            "container": {
+                "style": {
+                    "background-color": "transparent",
+                    "background-image": "none",
+                    "background-repeat": "no-repeat",
+                    "background-position": "top left"
+                }
+            },
+            "content": {
+                "style": {
+                    "background-color": "transparent",
+                    "color": "#000000",
+                    "width": "500px",
+                    "background-image": "none",
+                    "background-repeat": "no-repeat",
+                    "background-position": "top left"
+                }
+            },
+            "columns": [{
+                "grid-columns": 12,
+                "modules": [{
+                    "type": "mailup-bee-newsletter-modules-form",
+                    "locked": false,
+                    "uuid": "863574c4-3dc8-11ea-b77f-2e728ce88125",
+                    "descriptor": {
+                        "form": {
+                            "style": {
+                                "labels": {
+                                    "color": "#000000",
+                                    "min-width": "175px",
+                                    "font-style": "normal",
+                                    "font-weight": "normal",
+                                    "text-align": "left",
+                                    "line-height": "120%",
+                                    "label-position": "top"
+                                },
+                                "fields": {
+                                    "color": "#000000",
+                                    "border-radius": "0px",
+                                    "backgroundColor": "#FFFFFF",
+                                    "padding-top": "2px",
+                                    "padding-right": "2px",
+                                    "padding-bottom": "2px",
+                                    "padding-left": "2px",
+                                    "border-top": "1px solid black",
+                                    "border-right": "1px solid black",
+                                    "border-bottom": "1px solid black",
+                                    "border-left": "1px solid black"
+                                },
+                                "buttons": {
+                                    "width": "auto",
+                                    "color": "#FFFFFF",
+                                    "backgroundColor": "#000000",
+                                    "border-radius": "0px",
+                                    "text-align": "left",
+                                    "border-top": "0px solid transparent",
+                                    "border-right": "0px solid transparent",
+                                    "border-bottom": "0px solid transparent",
+                                    "border-left": "0px solid transparent",
+                                    "padding-top": "6px",
+                                    "padding-right": "10px",
+                                    "padding-bottom": "6px",
+                                    "padding-left": "10px"
+                                }
+                            },
+                            "structure": {
+                                "fields": {
+                                    "name": {
+                                        "type": "text",
+                                        "label": "Name *",
+                                        "attributes": {
+                                            "required": true
+                                        }
+                                    },
+                                    "surname": {
+                                        "type": "text",
+                                        "label": "Surname *",
+                                        "attributes": {
+                                            "required": true
+                                        }
+                                    },
+                                    "email":{
+                                        "type": "email",
+                                        "label":"E-mail *",
+                                        "attributes": {
+                                            "required": true
+                                        }
+                                    },
+                                    "phoneNumber":{
+                                        "type": "tel",
+                                        "label": "Phone number (xxx-xxx-xxxx)",
+                                        "attributes":{
+                                            "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        }
+                                    },
+                                    "age":{
+                                        "type": "number",
+                                        "label": "Age"
+                                    },
+                                    "gender":{
+                                        "type": "select",
+                                        "label": "Gender",
+                                        "options": [
+                                            {"type":"option","label":"Male","value":"M"},
+                                            {"type":"option","label":"Female","value":"F"},
+                                            {"type":"option","label":"Not telling","value":"-"}
+                                        ]
+                                    },
+                                    "hairColor":{
+                                        "type": "text",
+                                        "label": "Hair color",
+                                        "attributes":{
+                                            "list": "colorList"
+                                        }
+                                    },
+                                    "website":{
+                                        "type": "url",
+                                        "label": "Personal website"
+                                    },
+                                    "daysLabel":{
+                                        "type": "label",
+                                        "label": "Pick your preferred days for the classes"
+                                    },
+                                    "monday":{
+                                        "type":"checkbox","label": "Monday","attributes":{"name": "preferredDays"}
+                                    },
+                                    "tuesday":{
+                                        "type":"checkbox","label": "Tuesday","attributes":{"name": "preferredDays"}
+                                    },
+                                    "wednesday":{
+                                        "type":"checkbox","label": "Wednesday","attributes":{"name": "preferredDays"}
+                                    },
+                                    "thursday":{
+                                        "type":"checkbox","label": "Thursday","attributes":{"name": "preferredDays"}
+                                    },
+                                    "friday":{
+                                        "type":"checkbox","label": "Friday","attributes":{"name": "preferredDays"}
+                                    },
+                                    "saturday":{
+                                        "type":"checkbox","label": "Saturday","attributes":{"name": "preferredDays"}
+                                    },
+                                    "datalist":{
+                                        "type":"datalist",
+                                        "options":["blond","brown","black","white","blue","purple"],
+                                        "attributes":{
+                                            "id":"colorList"
+                                        }
+                                    },
+                                    "submit_button": {
+                                        "type": "submit",
+                                        "label": "",
+                                        "attributes": {
+                                            "value": "SEND DATA",
+                                            "name": "submit_button"
+                                        }
+                                    }
+                                },
+                                "layout": [
+                                    ["name", "surname"],
+                                    ["email", "phoneNumber"],
+                                    {
+                                        "fields": [
+                                            ["age", "gender", "hairColor"],
+                                            ["website"]
+                                        ],
+                                        "legend": "Additional info"
+                                    },
+                                    ["daysLabel"],
+                                    ["monday", "tuesday", "wednesday"],
+                                    ["thursday", "friday","saturday"],                                    
+                                    ["submit_button"],
+                                    ["datalist"]
+                                ],
+                                "attributes": {
+                                    "accept-charset": "UTF-8",
+                                    "action": "http://example.com/read-form-script",
+                                    "autocomplete": "on",
+                                    "enctype": "multipart/form-data",
+                                    "method": "post",
+                                    "novalidate": false,
+                                    "target": "_self"
+                                },
+                                "title": "Event Registration",
+                                "description": "A BEE test form"
+                            }
+                        },
+                        "style": {
+                            "font-size": "15px",
+                            "font-family": "sans-serif",
+                            "text-align": "left",
+                            "padding-top": "10px",
+                            "padding-right": "10px",
+                            "padding-bottom": "10px",
+                            "padding-left": "10px"
+                        },
+                        "computedStyle": {
+                            "hideContentOnMobile": false
+                        }
+                    }
+                }],
+                "style": {
+                    "background-color": "transparent",
+                    "padding-top": "5px",
+                    "padding-right": "0px",
+                    "padding-bottom": "5px",
+                    "padding-left": "0px",
+                    "border-top": "0px solid transparent",
+                    "border-right": "0px solid transparent",
+                    "border-bottom": "0px solid transparent",
+                    "border-left": "0px solid transparent"
+                }
+            }]
+        }]
+    }
+}
