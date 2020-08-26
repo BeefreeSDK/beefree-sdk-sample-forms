@@ -1,4 +1,4 @@
-﻿{
+{
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
@@ -74,6 +74,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -156,6 +159,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "dir": {
                                                 "type": "string"
@@ -187,6 +193,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -272,6 +281,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -366,6 +378,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -460,6 +475,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -560,6 +578,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accept": {
                                                 "type": "string"
@@ -648,6 +669,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -727,6 +751,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -815,6 +842,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -909,6 +939,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1003,6 +1036,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1062,7 +1098,7 @@
                                                 "type": "string"
                                             },
                                             "pattern": {
-                                                "type": "boolean"
+                                                "type": "string"
                                             },
                                             "placeholder": {
                                                 "type": "string"
@@ -1100,6 +1136,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1182,6 +1221,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1273,6 +1315,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1370,6 +1415,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1449,6 +1497,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1511,7 +1562,7 @@
                                                 "type": "string"
                                             },
                                             "pattern": {
-                                                "type": "boolean"
+                                                "type": "string"
                                             },
                                             "placeholder": {
                                                 "type": "string"
@@ -1549,6 +1600,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1614,7 +1668,7 @@
                                                 "type": "string"
                                             },
                                             "pattern": {
-                                                "type": "boolean"
+                                                "type": "string"
                                             },
                                             "placeholder": {
                                                 "type": "string"
@@ -1652,6 +1706,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1746,6 +1803,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
@@ -1840,6 +1900,9 @@
                                     "attributes": {
                                         "type": "object",
                                         "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^data-": { "type": ["string","number","boolean"]}
+                                        },
                                         "properties": {
                                             "accesskey": {
                                                 "type": "string"
